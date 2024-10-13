@@ -1,0 +1,27 @@
+<html>
+
+  <title>Jokes API</title>
+
+
+  <h1>Jokes</h1>
+  <button onclick="getJoke()">Tell me a joke</button>
+  <p id="joke"></p>
+
+  <script>
+    function getJoke() {
+      fetch('https://v2.jokeapi.dev/joke/Any?type=single')
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('joke').textContent = data.joke;
+        })
+        .catch(error => {
+          console.log(error);
+          document.getElementById('joke').textContent = 'Sorry, I couldn\'t get a joke. Try again later.';
+        });
+    }
+  </script>
+
+<p>Notes for me: when button is clicked it fetches a joke from the API using fetch(), handles responmse with then(), catches error with catch()</p>
+<p>accesses joke property from the data received from the API and sets text of HTML element 'joke' to show the joke</p>
+<p>I made api using this:https://sv443.net/jokeapi/v2/</p>
+</html>

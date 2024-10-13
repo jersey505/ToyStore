@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Text Layouts</title>
+    <style>
+   
+      h1 {
+        font-size: 36px;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+      }
+      
+      p {
+        font-size: 18px;
+        line-height: 1.5;
+        text-align: justify;
+        margin-bottom: 20px;
+      }
+      
+      ul {
+        margin-bottom: 20px;
+      }
+      
+      li {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 5px;
+      }
+      
+      blockquote {
+        font-style: italic;
+        font-size: 24px;
+        line-height: 1.5;
+        border-left: 4px solid #ccc;
+        padding-left: 10px;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <h1>Text Layouts</h1>
+    
+    <p>This chapter talks about text layouts and how you can organize text to create visually appealing pages.</p>
+    
+    <ul>
+      <li>You can organize</li>
+      <li>your text in a list</li>
+      <li>like this</li>
+    </ul>
+    
+    <blockquote>"Or you can make quotes like this" -Me</blockquote>
+    
+    <p>You can also organize your text in to columns</p>
+  </body>
+<head>
+	<title>Multi-Column Layout with Floats</title>
+	<style>
+		.container {
+			width: 100%;
+			max-width: 1200px;
+			margin: 0 auto;
+			overflow: hidden;
+		}
+		.column {
+			width: 30%;
+			float: left;
+			margin-right: 5%;
+			margin-bottom: 20px;
+			background-color: #f2f2f2;
+			padding: 20px;
+			box-sizing: border-box;
+		}
+		.column:nth-child(3n+3) {
+			margin-right: 0;
+		}
+		.clearfix::after {
+			content: "";
+			clear: both;
+			display: table;
+		}
+	</style>
+</head>
+<body>
+	<div class="container clearfix">
+		<div class="column">
+			<h2>Column 1</h2>
+			<p>You can place these columns any where you like.</p>
+		</div>
+		<div class="column">
+			<h2>Column 2</h2>
+			<p>Text</p>
+		</div>
+		<div class="column">
+			<h2>Column 3</h2>
+			<p>Text</p>
+		</div>
+		<div class="column">
+			<h2>Column 4</h2>
+			<p>Text</p>
+		</div>
+		<div class="column">
+			<h2>Column 5</h2>
+			<p>Text</p>
+		</div>
+		<div class="column">
+			<h2>Column 6</h2>
+			<p>Text</p>
+		</div>
+	</div>
+</body>
+</html>

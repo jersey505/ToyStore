@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap');
+.search-container {
+    position: relative;
+    top: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: black; 
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav ul li {
+    margin: 0 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.menu {
+    position: absolute;
+    top: 28.5px;
+    left: 225px;
+}
+
+.text {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: 30px;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: gray;
+    position: absolute;
+    padding-bottom: 100;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: space-around; /* Spread items evenly */
+    margin-top: 30px;
+    position: relative;
+}
+
+.menu-items .item {
+    position: relative;
+    width: 20%; /* Adjust the width as needed */
+    height: 350px; /* Adjust the height as needed */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+.menu-items .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 5px solid white;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    vertical-align: top;
+}
+.menu-items .item:hover {
+    transform: scale(1.05) rotate(0deg);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    border-color: #f00;
+}
+.menu-items .item p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    font-family: 'Space Grotesk', sans-serif; 
+    transition: transform 0.3s ease-in-out; 
+}
+.menu-items .item:hover img {
+    transform: scale(1.15);
+}
+.menu-items .item:hover p {
+    transform: scale(1.2); /* Adjust the scale value as needed */
+}
+.menu-button {
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.menu-button:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.1);
+}
+
+.container h4 {
+    color: white;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container {
+    position: relative;
+    top: -100px;
+    font-family: 'Roboto', sans-serif;
+}

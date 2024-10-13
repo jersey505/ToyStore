@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Functions and Objects Example</title>
+</head>
+<body>
+  <h1>Functions and Objects Example</h1>
+  <p>This chapter talks about functions and objects, you can use a function to create something like a bio:</p>
+
+  <h2>Person Object</h2>
+  <p>Name: <span id="personName"></span></p>
+  <p>Age: <span id="personAge"></span></p>
+  <p>Profession: <span id="personProfession"></span></p>
+<p>Or, you can use it to solve an equation like, whats the volume of a certain shape?</p>
+  <h2>Area and Volume</h2>
+  <p>Area: <span id="areaResult"></span></p>
+  <p>Volume: <span id="volumeResult"></span></p>
+
+  <script>
+    var person = {
+      name: "Jersey",
+      age: 13,
+      profession: "Student",
+      greet: function() {
+        return "Hello, my name is " + this.name + ".";
+      }
+    };
+
+    function calculateArea(width, height) {
+      return width * height;
+    }
+
+    function calculateVolume(length, width, height) {
+      return length * width * height;
+    }
+
+    document.getElementById("personName").textContent = person.name;
+    document.getElementById("personAge").textContent = person.age;
+    document.getElementById("personProfession").textContent = person.profession;
+
+    var width = 10;
+    var height = 34;
+    var length = 2;
+
+    var area = calculateArea(width, height);
+    var volume = calculateVolume(length, width, height);
+
+    document.getElementById("areaResult").textContent = area;
+    document.getElementById("volumeResult").textContent = volume;
+
+    console.log(person.greet());
+  </script>
+</body>
+</html>

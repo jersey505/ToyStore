@@ -1,0 +1,98 @@
+    <html>
+        <head>
+            <link rel="stylesheet" href="cart.css">
+            <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha384-wxM2RwSMnC/A3QbHf8k5pbbsja6H5zmZ/ONtRqpJg7Z9YUBgVOKG3uG/Kn4Ost6T" crossorigin="anonymous">
+
+        </head>
+
+     <div class="menu">
+        <button class="menu-button" onclick="location.href='home.html'">Home</button>
+        <button class="menu-button" onclick="location.href='shoptoy.html'">Pokemon Cards</button>
+        <button class="menu-button" onclick="location.href='videogame.html'">Video Games</button>
+        <button class="menu-button" onclick="location.href='pop.html'">POPs</button>
+        <button class="menu-button" onclick="location.href='lego.html'">Legos</button>
+        <button class="menu-button" onclick="location.href='figures.html'">Figures</button>
+        <button class="menu-button" onclick="location.href='nerf.html'">NERF</button>
+        <button class="menu-button" onclick="location.href='books.html'">Books</button>
+        <button class="menu-button" onclick="location.href='cart.html'">Cart</button>
+        <button class="menu-button" onclick="location.href='contact.html'">Contact Info</button>
+      </div>
+
+        <body onload="getItemsInCart()">
+
+            <div class="header">
+
+
+                <div> <button onclick="emptyCart()" class="emptyCartbutton"> Empty Cart</button></div>
+
+
+
+                <p class="logo">Toy Reborn - Cart</p>
+               <div class="cart"><i class="fa-solid fa-cart-shopping"></i><p id="count">0</p></div>
+            </div>  
+
+        <div class="cart-container">
+        <p class="cart-text">Items in Cart:</p>
+        <button class="checkout-button" onclick="redirectToCheckout()">Proceed to Checkout</button>
+       </div>   
+
+    <div class="cart-containertwo">
+     <p id="itemsInCart"></p>
+
+    </div>
+
+    <script>
+
+
+        var itemCount = 0; 
+
+            function getItemsInCart() {
+                var itemsForCart = localStorage.getItem("itemsForCart");
+                var itemsInCartElement = document.getElementById("itemsInCart");
+                var totalPrice = 0;
+
+                if (itemsForCart && itemsForCart.trim() !== "") {
+                    var itemsArray = JSON.parse(itemsForCart);
+
+                    itemsInCartElement.innerHTML = "";
+
+                    itemsArray.forEach(function (item) {
+                        var listItem = document.createElement("li");
+                        listItem.textContent = item.name + " - $" + item.price.toFixed(2);
+                        itemsInCartElement.appendChild(listItem);
+                        totalPrice += item.price;
+                    });
+
+
+                    itemCount = itemsArray.length;
+                } else {
+                    itemsInCartElement.innerHTML = "Your cart is empty.";
+                    itemCount = 0; 
+                }
+
+
+                   var totalElement = document.createElement("p");
+                totalElement.textContent = "Total Price: $" + totalPrice.toFixed(2);
+                itemsInCartElement.appendChild(totalElement);
+
+
+                document.getElementById("count").textContent = itemCount;
+                localStorage.setItem("emailBody", itemsInCartElement.innerHTML);
+            }
+
+            function emptyCart() {
+                localStorage.removeItem("itemsForCart");
+                document.getElementById("itemsInCart").innerHTML = "Your cart is empty.";
+                itemCount = 0; 
+                document.getElementById("count").textContent = itemCount;
+            }
+
+            function redirectToCheckout() {
+                window.location.href = 'checkout.html';
+            }
+
+        </script>
+
+    </body>
+    </html>

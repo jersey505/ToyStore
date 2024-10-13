@@ -1,0 +1,56 @@
+<html>
+<head>
+
+
+<title>Toy Reborn - Breath of The Wild Switch</title>
+<link rel="stylesheet" type="text/css" href="website.css">	
+</head>
+<body>
+<nav>
+<div class="menu">
+ <div class="menu">
+    <button class="menu-button" onclick="location.href='home.html'">Home</button>
+    <button class="menu-button" onclick="location.href='shoptoy.html'">Pokemon Cards</button>
+    <button class="menu-button" onclick="location.href='videogame.html'">Video Games</button>
+    <button class="menu-button" onclick="location.href='pop.html'">POPs</button>
+    <button class="menu-button" onclick="location.href='lego.html'">Legos</button>
+    <button class="menu-button" onclick="location.href='figures.html'">Figures</button>
+    <button class="menu-button" onclick="location.href='nerf.html'">NERF</button>
+    <button class="menu-button" onclick="location.href='books.html'">Books</button>
+    <button class="menu-button" onclick="location.href='cart.html'">Cart</button>
+    <button class="menu-button" onclick="location.href='contact.html'">Contact Info</button>
+  </div>
+</div>
+</nav>
+</body>
+
+<img src="aas.jpg" alt="Product 6" width="550" height="550" style="margin-left: 100px;">
+<div class="product-info">
+    <h1 id="toyName" data-price="30.00">Breath of The Wild Switch</h1><h1 style="color: lightgreen;">‏‏ ‎‎‎$30.00</h1>
+</div>
+<div class="other-stuff">
+    <p>About This Product: A boundary-breaking new game in the acclaimed series. <br>Travel across vast fields, through forests, and <br>to mountain peaks as you discover what has become of <br>the kingdom of Hyrule in this stunning Open-Air Adventure. </p>
+</div>
+<a href="cart.html">
+    <button class="add-to-cart" onclick="addToCart()"> Add to Cart</button>
+    </a>
+                                         
+<script>                                        
+function addToCart() {
+    var currentItemsInCart = localStorage.getItem("itemsForCart");
+    var productName = document.getElementById("toyName").innerHTML;
+    var productPrice = parseFloat(document.getElementById("toyName").getAttribute("data-price"));
+
+    if (localStorage.getItem("itemsForCart") == null) {
+        localStorage.setItem("itemsForCart", JSON.stringify([{ name: productName, price: productPrice }]));
+    } else {
+        let currentItemsInCart = JSON.parse(localStorage.getItem("itemsForCart"));
+        currentItemsInCart.push({ name: productName, price: productPrice });
+        localStorage.setItem("itemsForCart", JSON.stringify(currentItemsInCart));
+    }
+
+    
+    getItemsInCart();
+}
+</script> 
+</html>

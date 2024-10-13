@@ -1,0 +1,47 @@
+    <html>
+    <head>
+        <title>Toy Reborn - Checkout Form</title>
+        <link rel="stylesheet" type="text/css" href="checkout.css">
+        <link rel="stylesheet" type="text/css" href="menu.css">
+
+    </head>
+    <body>
+        <nav>
+       <div class="menu">
+    <button class="menu-button" onclick="location.href='home.html'">Home</button>
+    <button class="menu-button" onclick="location.href='shoptoy.html'">Pokemon Cards</button>
+    <button class="menu-button" onclick="location.href='videogame.html'">Video Games</button>
+    <button class="menu-button" onclick="location.href='pop.html'">POPs</button>
+    <button class="menu-button" onclick="location.href='lego.html'">Legos</button>
+    <button class="menu-button" onclick="location.href='figures.html'">Figures</button>
+    <button class="menu-button" onclick="location.href='nerf.html'">NERF</button>
+    <button class="menu-button" onclick="location.href='books.html'">Books</button>
+    <button class="menu-button" onclick="location.href='cart.html'">Cart</button>
+    <button class="menu-button" onclick="location.href='contact.html'">Contact Info</button>
+  </div>
+
+        </nav>
+        
+        <div class="checkout-form">
+        <h2>Please Fill in Your Personal Details Below:</h2>
+        <form onsubmit="emailSend(); reset(); return false;">
+            <label for="email">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Jack Frost" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="johndoe@example.com" required>
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" placeholder="1234 5678 9012 3456" required>
+            <label for="email">Credit Card Number:</label>
+            <input type="text" id="creditnumber" name="creditnumber" placeholder="4716-6646-5368-7210" required>
+            <label for="text">Expiration Date on Card:</label>
+            <input type="date" id="expire" name="expire" placeholder="1/20" required>
+            <label for="phone">Security Code:</label>
+            <input type="text" id="code" name="code" placeholder="111" required>
+            <button type="submit" class="btn">Confirm</button>
+        </form>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script src="checkout.js"></script>
+    </div>
+    </body>
+    </html>

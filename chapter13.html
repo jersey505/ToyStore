@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tables and Lists</title>
+	<style>
+		/* CSS styles */
+		ul {
+			list-style-type: square;
+			margin: 0;
+			padding: 0;
+		}
+		table {
+			border-collapse: collapse;
+			width: 100%;
+		}
+		th, td {
+			padding: 8px;
+			text-align: left;
+			border-bottom: 1px solid #ddd;
+		}
+		input[type=text], select {
+			padding: 12px 20px;
+			margin: 8px 0;
+			box-sizing: border-box;
+			border: 2px solid #ccc;
+			border-radius: 4px;
+		}
+		input[type=submit] {
+			background-color: #4CAF50;
+			color: white;
+			padding: 12px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+		input[type=submit]:hover {
+			background-color: #45a049;
+		}
+	</style>
+</head>
+<body>
+	<h1>This chapter talks about lists and tables</h1>
+
+	<h2>You can put things in a list like this:</h2>
+	<ul>
+		<li>Item 1</li>
+		<li>Item 2</li>
+		<li>Item 3</li>
+	</ul>
+
+	<h2>You can also put things in a  table like this:</h2>
+	<table>
+		<tr>
+			<th>Header 1</th>
+			<th>Header 2</th>
+			<th>Header 3</th>
+		</tr>
+		<tr>
+			<td>Row 1, Cell 1</td>
+			<td>Row 1, Cell 2</td>
+			<td>Row 1, Cell 3</td>
+		</tr>
+		<tr>
+			<td>Row 2, Cell 1</td>
+			<td>Row 2, Cell 2</td>
+			<td>Row 2, Cell 3</td>
+		</tr>
+		<tr>
+			<td>Row 3, Cell 1</td>
+			<td>Row 3, Cell 2</td>
+			<td>Row 3, Cell 3</td>
+		</tr>
+	</table>
+
+	<h2>Now take this example form which uses both lists and tables:</h2>
+	<form>
+		<label for="fname">First Name</label>
+		<input type="text" id="fname" name="fname" placeholder="Enter your first name">
+
+		<label for="lname">Last Name</label>
+		<input type="text" id="lname" name="lname" placeholder="Enter your last name">
+
+		<label for="email">Email</label>
+		<input type="text" id="email" name="email" placeholder="Enter your email address">
+
+		<label for="country">Country</label>
+		<select id="country" name="country">
+			<option value="USA">USA</option>
+			<option value="Canada">Canada</option>
+			<option value="Mexico">Mexico</option>
+		</select>
+
+		<input type="submit" value="Submit">
+	</form>
+
+</body>
+</html>

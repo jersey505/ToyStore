@@ -1,0 +1,29 @@
+
+<html>
+  <h1>Searching in Javascript Example</h1>
+  <p>search bar:</p>
+  <input type="text" id="searchInput" onkeyup="searchForItems()" placeholder="search">
+  <ul id="list">
+    <li>carrot</li>
+    <li>cucumber</li>
+    <li>apple</li>
+  </ul>
+  <script>
+    function searchForItems() {
+      const itemInput = document.getElementById("searchInput").value.toLowerCase();
+      const items = document.querySelectorAll("#list li");
+
+      for (const item of items) {
+        if (item.textContent.toLowerCase().includes(itemInput)) {
+          item.style.display = "block";
+        } else {
+          item.style.display = "none";
+        }
+      }
+    }
+  </script>
+<p>the searchForItems() function uses #list li to allow you to search for things in the search bar, function searchForItems() checks if the items have certain attributes</p>
+</html>
+
+
+

@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>Toy Reborn - Broly Banpresto Figure</title>
+<link rel="stylesheet" type="text/css" href="website.css">	
+</head>
+<body>
+<nav>
+<div class="menu">
+ <div class="menu">
+    <button class="menu-button" onclick="location.href='home.html'">Home</button>
+    <button class="menu-button" onclick="location.href='shoptoy.html'">Pokemon Cards</button>
+    <button class="menu-button" onclick="location.href='videogame.html'">Video Games</button>
+    <button class="menu-button" onclick="location.href='pop.html'">POPs</button>
+    <button class="menu-button" onclick="location.href='lego.html'">Legos</button>
+    <button class="menu-button" onclick="location.href='figures.html'">Figures</button>
+    <button class="menu-button" onclick="location.href='nerf.html'">NERF</button>
+    <button class="menu-button" onclick="location.href='books.html'">Books</button>
+    <button class="menu-button" onclick="location.href='cart.html'">Cart</button>
+    <button class="menu-button" onclick="location.href='contact.html'">Contact Info</button>
+  </div>
+</div>
+</nav>
+
+<div class="product">
+    <img src="brolyfig.jpeg" alt="Broly Banpresto Figure" width="400" height="550" style="margin-left: 100px;">
+    <div class="product-info">
+        <h1 id="toyName" data-price="30.00">Broly Banpresto Figure</h1><h1 style="color: lightgreen;">$30.00</h1>
+    </div>
+    <div class="other-stuff">
+        <p>About This Item: This Match Makers figure set showcases the epic battle between <br>Super Saiyan Broly and Super Saiyan Gogeta as seen in the anime movie Dragon Ball Super: Broly. <br>This figure of Broly reaches a height of 7 inches and comes with a black circular base. </p>
+    </div>
+   <a href="cart.html">
+    <button class="add-to-cart" onclick="addToCart()"> Add to Cart</button>
+    </a>
+         
+</div>
+<script>                                        
+function addToCart() {
+    var currentItemsInCart = localStorage.getItem("itemsForCart");
+    var productName = document.getElementById("toyName").innerHTML;
+    var productPrice = parseFloat(document.getElementById("toyName").getAttribute("data-price"));
+
+    if (localStorage.getItem("itemsForCart") == null) {
+        localStorage.setItem("itemsForCart", JSON.stringify([{ name: productName, price: productPrice }]));
+    } else {
+        let currentItemsInCart = JSON.parse(localStorage.getItem("itemsForCart"));
+        currentItemsInCart.push({ name: productName, price: productPrice });
+        localStorage.setItem("itemsForCart", JSON.stringify(currentItemsInCart));
+    }
+
+    
+    getItemsInCart();
+}
+</script> 
+</body>
+</html>

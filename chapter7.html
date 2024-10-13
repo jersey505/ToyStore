@@ -1,0 +1,88 @@
+<p>This chapter talks about forms.</p>
+
+<p>Here is where you can enter your username</p>
+<from action="http://www.example.com/login.php"method="get">
+<p>Username:
+   <input type="text" name="username" size="15"
+          maxlength="30" />
+    
+</p>
+</from>
+
+<p>Here is where you can put your password:</p>
+<from action="http://www.example.com/login.php"method="get">
+<p>Password:
+   <input type="text" name="password" size="15"
+          maxlength="30" />
+    
+</p>
+</from>
+
+<p>You can also put a text area:</p>
+<from action="http://www.example.com/login.php"method="get">
+<p>What is your opinion on this topic?</p>
+<textarea name="comments" cols"20" rows="4">Enter your opinions
+    </textarea>
+</from>
+
+<p>You can also make users pick from different options:</p>
+<from action="http://www.example.com/profile.php"method="get">
+    <p>Please select your favorite music genre:
+    <br />
+    <input type="radio" name "genre" value="rap"  /> Rap
+    <br />
+    <input type="radio" name "genre" value="jazz"  /> Jazz
+    <br />
+    <input type="radio" name "genre" value="pop"  /> Pop
+    </p>
+    
+<p>You could also make the checkboxes square:</p>
+<from action="http://www.example.com/profile.php"method="get">
+    <p>Please select your favorite music genre:
+    <br />
+    <input type="checkbox" name "genre" value="rap"  /> Rap
+    <br />
+    <input type="checkbox" name "genre" value="jazz"  /> Jazz
+    <br />
+    <input type="checkbox" name "genre" value="pop"  /> Pop
+    </p>
+    
+<p>You can also make a drop down list box:</p>
+<from action="http://www.example.com/profile.php"method="get">
+    <p>What device do you listen to music on?</p>
+    <select name="devices">
+    <option value="Ipad">Ipad</option>
+    <option value="Iphone">Iphone</option>
+    <option value="computer">Computer</option>
+    </select>
+    </from>
+    
+<p>You can also make a multiple select box:</p>
+<from action="http://www.example.com/profile.php"method="get">
+<p>Do you play any of these instruments?</p>
+<select name="instruments" size="3"
+        multiple="multiple">
+<option value="guitar" selected="selected">
+    Guitar</option>
+ <option value="Piano">
+    Piano</option>   
+<option value="drums">
+    Drums</option>
+    </select>
+    </from>
+
+<p>You can make a file input box:</p>
+
+<from action="http://www.example.com/profile.php"method="get">
+<p>Upload your song in MP3 format:</p>
+<input type="file" name="user-song" /><br />
+<input type="submit" value="Upload" />
+    </from>
+    
+<p>Last is the submit button:</p>
+<from action="http://www.example.com/profile.php"method="get">
+<p>Submit your favorite store:</p>
+    <input type="text" name="favorite" />
+    <input type="submit" name="submit"
+           value="Submit" />
+    </from>

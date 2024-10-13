@@ -1,0 +1,30 @@
+
+<html>
+<head>
+  <title>Loops and Decisions</title>
+  <script>
+    function calculateFactorial() {
+      var number = parseInt(document.getElementById("number").value);
+
+      var factorial = 1;
+
+      for (var i = 1; i <= number; i++) {
+        factorial *= i;
+      }
+
+      document.getElementById("result").innerHTML = "Factorial: " + factorial;
+    }
+  </script>
+</head>
+<body>
+  <h1>Loops and Decisions Example</h1>
+
+  <p>Please put a number:</p>
+  <input type="number" id="number" />
+  
+  <button onclick="calculateFactorial()">Calculate</button> 
+    <p>How does it work?:</p>
+  <p>If you a put a number like 5, it will be calculated as 5 * 4 * 3 * 2 * 1, so it finds the factorial of any nymber.</p>
+  <p id="result"></p>
+</body>
+</html>

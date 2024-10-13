@@ -1,0 +1,57 @@
+<html>
+<head>
+<input type="hidden" name="url" value="toy-reborn-vegeta-gx-materia-figure.html">
+
+<title>Toy Reborn - Nerf Star Wars Rogue One</title>
+	<link rel="stylesheet" type="text/css" href="website.css">	
+</head>
+<body>
+<nav>
+<div class="menu">
+<ul>
+<li><a href="home.html">Home</a></li>
+<li><a href="shoptoy.html">Pokemon Cards</a></li>
+<li><a href="videogame.html">Video Games</a></li>
+<li><a href="pop.html">POPs</a></li>
+<li><a href="lego.html">Legos</a></li>
+<li><a href="figures.html">Figures</a></li>
+<li><a href="nerf.html">NERF</a></li>
+<li><a href="books.html">Books</a></li>
+
+<li><a href="cart.html">Cart</a></li>
+<li><a href="contact.html">Contact Info</a></li>
+</ul>
+</div>
+</nav>
+</body>
+
+<img src="nerfstar.jpeg" alt="Product 6" width="550" height="550" style="margin-left: 100px;">
+<div class="product-info">
+    <h1 id="toyName" data-price="50.00">Nerf Star Wars Rogue One</h1><h1 style="color: lightgreen;">‏‏ ‎‎‎$50.00</h1>
+</div>
+<div class="other-stuff">
+    <p>About This Item: Captain Cassian Andor Eadu's Nerf blaster that glows in the dark.</p>
+</div>
+<a href="cart.html">
+    <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+    </a>
+<script>                                        
+function addToCart() {
+    var currentItemsInCart = localStorage.getItem("itemsForCart");
+    var productName = document.getElementById("toyName").innerHTML;
+    var productPrice = parseFloat(document.getElementById("toyName").getAttribute("data-price"));
+
+    if (localStorage.getItem("itemsForCart") == null) {
+        localStorage.setItem("itemsForCart", JSON.stringify([{ name: productName, price: productPrice }]));
+    } else {
+        let currentItemsInCart = JSON.parse(localStorage.getItem("itemsForCart"));
+        currentItemsInCart.push({ name: productName, price: productPrice });
+        localStorage.setItem("itemsForCart", JSON.stringify(currentItemsInCart));
+    }
+
+    
+    getItemsInCart();
+}
+</script> 
+
+</html>

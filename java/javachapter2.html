@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Variables in JavaScript</title>
+    <script>
+        // JavaScript code
+      window.onload = function() {
+            displayMessage();
+            calculateSum();
+        };
+
+        function displayMessage() {
+            var name = "John";
+            var age = 25;
+            var country = "USA";
+            
+            var message = "My name is " + name + ", I am " + age + " years old, and I live in " + country + ".";
+            
+            document.getElementById("output").textContent = message;
+        }
+
+        function calculateSum() {
+            var num1 = 3;
+            var num2 = 69;
+            
+            var sum = num1 + num2;
+            
+            document.getElementById("result").textContent = "The sum is: " + sum;
+        }
+        
+    </script>
+</head>
+<body>
+    <h1>Variables in JavaScript</h1>
+    <p>Java script has variables, variables can be used for things like numbers and words, here is an example:</p>
+    <p id="output"></p>
+    
+    <p>You can also do this with calculations: </p>
+    <p id="result"></p>
+    
+</body>
+</html>

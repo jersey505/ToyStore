@@ -1,0 +1,54 @@
+<html>
+<head>
+
+
+<title>Toy Reborn - Nerf Rival Nemesis</title>
+	<link rel="stylesheet" type="text/css" href="website.css">	
+</head>
+<body>
+<nav>
+ <div class="menu">
+    <button class="menu-button" onclick="location.href='home.html'">Home</button>
+    <button class="menu-button" onclick="location.href='shoptoy.html'">Pokemon Cards</button>
+    <button class="menu-button" onclick="location.href='videogame.html'">Video Games</button>
+    <button class="menu-button" onclick="location.href='pop.html'">POPs</button>
+    <button class="menu-button" onclick="location.href='lego.html'">Legos</button>
+    <button class="menu-button" onclick="location.href='figures.html'">Figures</button>
+    <button class="menu-button" onclick="location.href='nerf.html'">NERF</button>
+    <button class="menu-button" onclick="location.href='books.html'">Books</button>
+    <button class="menu-button" onclick="location.href='cart.html'">Cart</button>
+    <button class="menu-button" onclick="location.href='contact.html'">Contact Info</button>
+  </div>
+
+</nav>
+</body>
+
+<img src="frbro.jpg" alt="Product 6" width="550" height="550" style="margin-left: 100px;">
+<div class="product-info">
+    <h1 id="toyName" data-price="75.00">Nerf Rival Nemesis</h1><h1 style="color: lightgreen;">‏‏ ‎‎‎$75.00</h1>
+</div>
+<div class="other-stuff">
+    <p>About This Item: This blaster has an easy-loading hopper holds up to 100 rounds. <br>The blaster comes with 100 high-impact rounds and is a fully motorized blaster</p>
+</div>
+<a href="cart.html">
+    <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+    </a>
+<script>                                        
+function addToCart() {
+    var currentItemsInCart = localStorage.getItem("itemsForCart");
+    var productName = document.getElementById("toyName").innerHTML;
+    var productPrice = parseFloat(document.getElementById("toyName").getAttribute("data-price"));
+
+    if (localStorage.getItem("itemsForCart") == null) {
+        localStorage.setItem("itemsForCart", JSON.stringify([{ name: productName, price: productPrice }]));
+    } else {
+        let currentItemsInCart = JSON.parse(localStorage.getItem("itemsForCart"));
+        currentItemsInCart.push({ name: productName, price: productPrice });
+        localStorage.setItem("itemsForCart", JSON.stringify(currentItemsInCart));
+    }
+
+    
+    getItemsInCart();
+}
+</script> 
+</html>
